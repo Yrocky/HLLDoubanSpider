@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HLLMovieRankController.h
 //  HLLDoubanSpider
 //
 //  Created by admin on 16/1/7.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HLLMovieRankController : UITableViewController
 
 @end
-
