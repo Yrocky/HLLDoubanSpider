@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8482C58B1C3E23CD004A871F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482C58A1C3E23CD004A871F /* main.m */; };
+		8482C58E1C3E23CD004A871F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482C58D1C3E23CD004A871F /* AppDelegate.m */; };
+		8482C5911C3E23CD004A871F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482C5901C3E23CD004A871F /* ViewController.m */; };
+		8482C5941C3E23CD004A871F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8482C5921C3E23CD004A871F /* Main.storyboard */; };
+		8482C5961C3E23CE004A871F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8482C5951C3E23CE004A871F /* Assets.xcassets */; };
+		8482C5991C3E23CE004A871F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8482C5971C3E23CE004A871F /* LaunchScreen.storyboard */; };
+		8482C5A41C3E23CE004A871F /* HLLDoubanSpiderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482C5A31C3E23CE004A871F /* HLLDoubanSpiderTests.m */; };
+		8482C5AF1C3E23CE004A871F /* HLLDoubanSpiderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482C5AE1C3E23CE004A871F /* HLLDoubanSpiderUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8482C5A01C3E23CE004A871F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8482C57E1C3E23CC004A871F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8482C5851C3E23CC004A871F;
+			remoteInfo = HLLDoubanSpider;
+		};
+		8482C5AB1C3E23CE004A871F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8482C57E1C3E23CC004A871F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8482C5851C3E23CC004A871F;
+			remoteInfo = HLLDoubanSpider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8482C5861C3E23CC004A871F /* HLLDoubanSpider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HLLDoubanSpider.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8482C58A1C3E23CD004A871F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8482C58C1C3E23CD004A871F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8482C58D1C3E23CD004A871F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8482C58F1C3E23CD004A871F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8482C5901C3E23CD004A871F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8482C5931C3E23CD004A871F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8482C5951C3E23CE004A871F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8482C5981C3E23CE004A871F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8482C59A1C3E23CE004A871F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8482C59F1C3E23CE004A871F /* HLLDoubanSpiderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLLDoubanSpiderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8482C5A31C3E23CE004A871F /* HLLDoubanSpiderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLLDoubanSpiderTests.m; sourceTree = "<group>"; };
+		8482C5A51C3E23CE004A871F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8482C5AA1C3E23CE004A871F /* HLLDoubanSpiderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLLDoubanSpiderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8482C5AE1C3E23CE004A871F /* HLLDoubanSpiderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLLDoubanSpiderUITests.m; sourceTree = "<group>"; };
+		8482C5B01C3E23CE004A871F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8482C5831C3E23CC004A871F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8482C59C1C3E23CE004A871F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8482C5A71C3E23CE004A871F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8482C57D1C3E23CC004A871F = {
+			isa = PBXGroup;
+			children = (
+				8482C5881C3E23CD004A871F /* HLLDoubanSpider */,
+				8482C5A21C3E23CE004A871F /* HLLDoubanSpiderTests */,
+				8482C5AD1C3E23CE004A871F /* HLLDoubanSpiderUITests */,
+				8482C5871C3E23CC004A871F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8482C5871C3E23CC004A871F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8482C5861C3E23CC004A871F /* HLLDoubanSpider.app */,
+				8482C59F1C3E23CE004A871F /* HLLDoubanSpiderTests.xctest */,
+				8482C5AA1C3E23CE004A871F /* HLLDoubanSpiderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8482C5881C3E23CD004A871F /* HLLDoubanSpider */ = {
+			isa = PBXGroup;
+			children = (
+				8482C58C1C3E23CD004A871F /* AppDelegate.h */,
+				8482C58D1C3E23CD004A871F /* AppDelegate.m */,
+				8482C58F1C3E23CD004A871F /* ViewController.h */,
+				8482C5901C3E23CD004A871F /* ViewController.m */,
+				8482C5921C3E23CD004A871F /* Main.storyboard */,
+				8482C5951C3E23CE004A871F /* Assets.xcassets */,
+				8482C5971C3E23CE004A871F /* LaunchScreen.storyboard */,
+				8482C59A1C3E23CE004A871F /* Info.plist */,
+				8482C5891C3E23CD004A871F /* Supporting Files */,
+			);
+			path = HLLDoubanSpider;
+			sourceTree = "<group>";
+		};
+		8482C5891C3E23CD004A871F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8482C58A1C3E23CD004A871F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8482C5A21C3E23CE004A871F /* HLLDoubanSpiderTests */ = {
+			isa = PBXGroup;
+			children = (
+				8482C5A31C3E23CE004A871F /* HLLDoubanSpiderTests.m */,
+				8482C5A51C3E23CE004A871F /* Info.plist */,
+			);
+			path = HLLDoubanSpiderTests;
+			sourceTree = "<group>";
+		};
+		8482C5AD1C3E23CE004A871F /* HLLDoubanSpiderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8482C5AE1C3E23CE004A871F /* HLLDoubanSpiderUITests.m */,
+				8482C5B01C3E23CE004A871F /* Info.plist */,
+			);
+			path = HLLDoubanSpiderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8482C5851C3E23CC004A871F /* HLLDoubanSpider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8482C5B31C3E23CE004A871F /* Build configuration list for PBXNativeTarget "HLLDoubanSpider" */;
+			buildPhases = (
+				8482C5821C3E23CC004A871F /* Sources */,
+				8482C5831C3E23CC004A871F /* Frameworks */,
+				8482C5841C3E23CC004A871F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HLLDoubanSpider;
+			productName = HLLDoubanSpider;
+			productReference = 8482C5861C3E23CC004A871F /* HLLDoubanSpider.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8482C59E1C3E23CE004A871F /* HLLDoubanSpiderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8482C5B61C3E23CE004A871F /* Build configuration list for PBXNativeTarget "HLLDoubanSpiderTests" */;
+			buildPhases = (
+				8482C59B1C3E23CE004A871F /* Sources */,
+				8482C59C1C3E23CE004A871F /* Frameworks */,
+				8482C59D1C3E23CE004A871F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8482C5A11C3E23CE004A871F /* PBXTargetDependency */,
+			);
+			name = HLLDoubanSpiderTests;
+			productName = HLLDoubanSpiderTests;
+			productReference = 8482C59F1C3E23CE004A871F /* HLLDoubanSpiderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8482C5A91C3E23CE004A871F /* HLLDoubanSpiderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8482C5B91C3E23CE004A871F /* Build configuration list for PBXNativeTarget "HLLDoubanSpiderUITests" */;
+			buildPhases = (
+				8482C5A61C3E23CE004A871F /* Sources */,
+				8482C5A71C3E23CE004A871F /* Frameworks */,
+				8482C5A81C3E23CE004A871F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8482C5AC1C3E23CE004A871F /* PBXTargetDependency */,
+			);
+			name = HLLDoubanSpiderUITests;
+			productName = HLLDoubanSpiderUITests;
+			productReference = 8482C5AA1C3E23CE004A871F /* HLLDoubanSpiderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8482C57E1C3E23CC004A871F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = HLL;
+				TargetAttributes = {
+					8482C5851C3E23CC004A871F = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					8482C59E1C3E23CE004A871F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 8482C5851C3E23CC004A871F;
+					};
+					8482C5A91C3E23CE004A871F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 8482C5851C3E23CC004A871F;
+					};
+				};
+			};
+			buildConfigurationList = 8482C5811C3E23CC004A871F /* Build configuration list for PBXProject "HLLDoubanSpider" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8482C57D1C3E23CC004A871F;
+			productRefGroup = 8482C5871C3E23CC004A871F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8482C5851C3E23CC004A871F /* HLLDoubanSpider */,
+				8482C59E1C3E23CE004A871F /* HLLDoubanSpiderTests */,
+				8482C5A91C3E23CE004A871F /* HLLDoubanSpiderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8482C5841C3E23CC004A871F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8482C5991C3E23CE004A871F /* LaunchScreen.storyboard in Resources */,
+				8482C5961C3E23CE004A871F /* Assets.xcassets in Resources */,
+				8482C5941C3E23CD004A871F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8482C59D1C3E23CE004A871F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8482C5A81C3E23CE004A871F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8482C5821C3E23CC004A871F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8482C5911C3E23CD004A871F /* ViewController.m in Sources */,
+				8482C58E1C3E23CD004A871F /* AppDelegate.m in Sources */,
+				8482C58B1C3E23CD004A871F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8482C59B1C3E23CE004A871F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8482C5A41C3E23CE004A871F /* HLLDoubanSpiderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8482C5A61C3E23CE004A871F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8482C5AF1C3E23CE004A871F /* HLLDoubanSpiderUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8482C5A11C3E23CE004A871F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8482C5851C3E23CC004A871F /* HLLDoubanSpider */;
+			targetProxy = 8482C5A01C3E23CE004A871F /* PBXContainerItemProxy */;
+		};
+		8482C5AC1C3E23CE004A871F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8482C5851C3E23CC004A871F /* HLLDoubanSpider */;
+			targetProxy = 8482C5AB1C3E23CE004A871F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8482C5921C3E23CD004A871F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8482C5931C3E23CD004A871F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8482C5971C3E23CE004A871F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8482C5981C3E23CE004A871F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8482C5B11C3E23CE004A871F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8482C5B21C3E23CE004A871F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8482C5B41C3E23CE004A871F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HLLDoubanSpider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HLL.HLLDoubanSpider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8482C5B51C3E23CE004A871F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HLLDoubanSpider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HLL.HLLDoubanSpider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8482C5B71C3E23CE004A871F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HLLDoubanSpiderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HLL.HLLDoubanSpiderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HLLDoubanSpider.app/HLLDoubanSpider";
+			};
+			name = Debug;
+		};
+		8482C5B81C3E23CE004A871F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HLLDoubanSpiderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HLL.HLLDoubanSpiderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HLLDoubanSpider.app/HLLDoubanSpider";
+			};
+			name = Release;
+		};
+		8482C5BA1C3E23CE004A871F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HLLDoubanSpiderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HLL.HLLDoubanSpiderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HLLDoubanSpider;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8482C5BB1C3E23CE004A871F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HLLDoubanSpiderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HLL.HLLDoubanSpiderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HLLDoubanSpider;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8482C5811C3E23CC004A871F /* Build configuration list for PBXProject "HLLDoubanSpider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8482C5B11C3E23CE004A871F /* Debug */,
+				8482C5B21C3E23CE004A871F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8482C5B31C3E23CE004A871F /* Build configuration list for PBXNativeTarget "HLLDoubanSpider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8482C5B41C3E23CE004A871F /* Debug */,
+				8482C5B51C3E23CE004A871F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8482C5B61C3E23CE004A871F /* Build configuration list for PBXNativeTarget "HLLDoubanSpiderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8482C5B71C3E23CE004A871F /* Debug */,
+				8482C5B81C3E23CE004A871F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8482C5B91C3E23CE004A871F /* Build configuration list for PBXNativeTarget "HLLDoubanSpiderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8482C5BA1C3E23CE004A871F /* Debug */,
+				8482C5BB1C3E23CE004A871F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8482C57E1C3E23CC004A871F /* Project object */;
+}
