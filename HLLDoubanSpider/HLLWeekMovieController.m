@@ -54,10 +54,7 @@
     
     return cell;
 }
--(UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
 
-    return [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 0.1)];
-}
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
 
     return 0.1f;

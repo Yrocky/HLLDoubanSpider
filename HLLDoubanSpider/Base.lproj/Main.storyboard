@@ -159,7 +159,7 @@
             </objects>
             <point key="canvasLocation" x="1871" y="281"/>
         </scene>
-        <!--电影排行榜-->
+        <!--豆瓣新片榜-->
         <scene sceneID="fSV-Or-j5T">
             <objects>
                 <tableViewController id="58h-Nd-4Kz" customClass="HLLMovieRankController" sceneMemberID="viewController">
@@ -246,7 +246,7 @@
                             <outlet property="delegate" destination="58h-Nd-4Kz" id="Klj-vJ-0fJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="电影排行榜" id="5aD-fD-E2W"/>
+                    <navigationItem key="navigationItem" title="豆瓣新片榜" id="5aD-fD-E2W"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igm-Oh-q4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
