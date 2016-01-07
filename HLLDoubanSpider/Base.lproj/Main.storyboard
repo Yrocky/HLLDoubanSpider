@@ -10,20 +10,12 @@
             <objects>
                 <tableViewController id="e84-Kr-ioY" customClass="HLLTOP250Controller" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="169" sectionHeaderHeight="28" sectionFooterHeight="28" id="cJ8-zb-Ye9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="adU-dj-BDJ">
-                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="e84-Kr-ioY" id="15h-2O-CRP"/>
-                            </connections>
-                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movie" rowHeight="169" id="NGd-w4-fPp" customClass="HLLMovieCell">
-                                <rect key="frame" x="0.0" y="136" width="600" height="169"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="169"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NGd-w4-fPp" id="Utb-1U-xaf">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="168"/>
@@ -150,7 +142,6 @@
                 <searchDisplayController id="km3-yP-Hg0">
                     <connections>
                         <outlet property="delegate" destination="e84-Kr-ioY" id="OIv-SV-Cjt"/>
-                        <outlet property="searchBar" destination="adU-dj-BDJ" id="gfg-EY-xwY"/>
                         <outlet property="searchContentsController" destination="e84-Kr-ioY" id="vJt-dm-eM7"/>
                         <outlet property="searchResultsDataSource" destination="e84-Kr-ioY" id="bGK-qT-mFk"/>
                         <outlet property="searchResultsDelegate" destination="e84-Kr-ioY" id="ibZ-qq-Okj"/>
@@ -164,7 +155,7 @@
             <objects>
                 <tableViewController id="58h-Nd-4Kz" customClass="HLLMovieRankController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="162" sectionHeaderHeight="28" sectionFooterHeight="28" id="IQt-TJ-WfR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -257,7 +248,7 @@
             <objects>
                 <tableViewController id="Boi-8x-MBQ" customClass="HLLWeekMovieController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="31" sectionHeaderHeight="18" sectionFooterHeight="18" id="UwT-ih-EZ1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -341,9 +332,11 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IfC-4n-J67" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="r7T-FP-LAk">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="r7T-FP-LAk">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="jSY-Ll-YOo" kind="relationship" relationship="viewControllers" id="Ocn-MG-VtR"/>
@@ -355,11 +348,11 @@
             </objects>
             <point key="canvasLocation" x="272" y="1139"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="gZL-jA-WPZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kYj-EE-LdE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YCc-iJ-byA"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="YCc-iJ-byA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FMA-D3-3XU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -374,11 +367,11 @@
             </objects>
             <point key="canvasLocation" x="1117" y="1831"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="0XD-zH-5qi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fmm-ag-jHO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="T2n-X3-1Jt"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="T2n-X3-1Jt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dS0-dS-gmd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -393,11 +386,11 @@
             </objects>
             <point key="canvasLocation" x="1117" y="1139"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="DPo-Cb-n4A">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jSY-Ll-YOo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="JZb-Wp-8H5"/>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="JZb-Wp-8H5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qAW-0L-eBI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
