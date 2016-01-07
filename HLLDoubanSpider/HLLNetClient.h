@@ -21,9 +21,4 @@ typedef void(^ResultBlock)(id data,NSError * error);
 @interface HLLNetClient : AFHTTPSessionManager
 
 + (instancetype) shareClient;
-
-- (void) requestDataWithMethodType:(NetworkMethodType)method
-                          withPath:(NSString *)urlPath
-                        withParams:(NSDictionary *)params
-                    andResultBlock:(ResultBlock)result;
 @end

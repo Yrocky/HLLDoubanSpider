@@ -216,7 +216,7 @@ static HLLHTMLParseManager *_instance;
         movie.name = [nameElement.stringValue removeSpaceAndNewline];
         movie.rank = [numberElement.stringValue intValue];
         movie.rankStep = [rangeElement.stringValue intValue];
-        movie.rankStatus = [rangeElement.attributes[@"class"] isEqualToString:@"up"] ? UP : DOWN;
+        movie.rankStatus = [rangeElement.attributes[@"class"] isEqualToString:@"up"] ? UP : ([rangeElement.attributes[@"class"] isEqualToString:@"down"] ? DOWN : NONE);
         movie;
     });
     return movie;

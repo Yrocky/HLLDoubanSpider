@@ -9,7 +9,6 @@
 #import "HLLRequestManager.h"
 #import "HLLNetClient.h"
 
-
 @implementation HLLRequestManager
 
 static HLLRequestManager *_instance;
@@ -31,24 +30,6 @@ static HLLRequestManager *_instance;
     });
     return _instance;
 }
-
-
-- (void)request_loginWithUserName:(NSString *)name
-                      andPassword:(NSString *)password
-                           result:(requestResult)result{
-
-    [[HLLNetClient shareClient] requestDataWithMethodType:GET
-                                                 withPath:@""
-                                               withParams:@{}
-                                           andResultBlock:^(id data, NSError *error) {
-                                               if (data) {
-                                                   result(data,nil);
-                                               }else{
-                                                   result(nil,error);
-                                               }
-                                           }];
-}
-
 - (void) request_doubanTOP250MovieWithPageNumber:(NSUInteger)pageNumber result:(requestResult)result{
 
     NSDictionary * params;
@@ -68,7 +49,6 @@ static HLLRequestManager *_instance;
         }
     }];
 }
-
 
 - (void) request_doubanWeekMovieWithResult:(requestResult)result{
 

@@ -10,8 +10,9 @@
 
 typedef NS_ENUM(NSUInteger , MovieRankStatus) {
     
-    UP      = 0,
-    DOWN    = 1
+    UP      = 0,// 排名上升
+    DOWN    = 1,// 排名下降
+    NONE    = 2 // 排名没变
 };
 @interface HLLMovie : NSObject
 

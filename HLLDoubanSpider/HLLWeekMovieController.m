@@ -8,12 +8,10 @@
 
 #import "HLLWeekMovieController.h"
 
-#import <Ono/Ono.h>
 #import "HLLRequestManager.h"
 #import "HLLHTMLParseManager.h"
 #import "HLLMovieCell.h"
 #import <MJRefresh/MJRefresh.h>
-
 
 @interface HLLWeekMovieController ()
 @property (nonatomic ,strong) NSMutableArray * weekMovies;
@@ -72,7 +70,7 @@
 -  (void) reloadWeekMovieData{
     
     [[HLLRequestManager shareRequestManager] request_doubanWeekMovieWithResult:^(id data, NSError *error) {
-        
+        NSLog(@"++++++New Movie++++++");
         HLLHTMLParseManager * parserManager = [HLLHTMLParseManager shareParseManager];
         [parserManager parseasWeekMovieWithHTMLData:data andError:error result:^(NSString *dateRangeContext, NSArray *weekMovies, NSError *parseError) {
             

@@ -7,12 +7,11 @@
 //
 
 #import "HLLMovieRankController.h"
-#import <Ono/Ono.h>
+
 #import "HLLRequestManager.h"
 #import "HLLHTMLParseManager.h"
 #import "HLLMovieCell.h"
 #import <MJRefresh/MJRefresh.h>
-
 
 @interface HLLMovieRankController ()
 @property (nonatomic ,strong) NSMutableArray * newMovies;
@@ -79,7 +78,7 @@
     [[HLLRequestManager shareRequestManager] request_doubanNewMovieWithResult:^(id data, NSError *error) {
         
         HLLHTMLParseManager * parseManager = [HLLHTMLParseManager shareParseManager];
-        NSLog(@"++++++Week Movie++++++");
+        NSLog(@"++++++New Movie++++++");
         [parseManager parseNewMovieWithHTMLData:data andError:error result:^(NSArray *newMovies, NSError *parseError) {
             
             if (self.newMovies.count) {

@@ -26,8 +26,19 @@
 
 @implementation HLLMovieCell
 
-- (void)configureCellWithTOP250Movie:(HLLMovie *)movie{
 
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+}
+
+@end
+
+@implementation HLLMovieCell (TOP250)
+
+- (void)configureCellWithTOP250Movie:(HLLMovie *)movie{
+    
     self.movieRankLabel.text = [NSString stringWithFormat:@"%d", movie.rank];
     self.movieNameLabel.text = [NSString stringWithFormat:@"%@",movie.name];
     self.movieDescLabel.text = [NSString stringWithFormat:@"%@",movie.movieDesc];
@@ -37,13 +48,20 @@
     NSURL * imageURL = [NSURL URLWithString:movie.img];
     [self.movieImageView sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"db.png"]];
 }
+@end
+
+@implementation HLLMovieCell (WeekMovie)
 
 - (void)configureCellWithWeekMovie:(HLLRankMovie *)movie{
-
+    
     self.movieNameLabel.text = [NSString stringWithFormat:@"%@",movie.name];
     self.movieRankLabel.text = [NSString stringWithFormat:@"%d", movie.rank];
     self.movieRankStepLabel.text = [NSString stringWithFormat:@"%d",movie.rankStep];
 }
+@end
+
+@implementation HLLMovieCell (NewMovie)
+
 - (void)configureCellWithNewMovie:(HLLMovie *)movie{
     
     self.movieNameLabel.text = [NSString stringWithFormat:@"%@",movie.name];
@@ -54,11 +72,4 @@
     [self.movieImageView sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"db.png"]];
     
 }
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 @end
