@@ -54,6 +54,10 @@
     self.tableView.mj_footer = footer;
     
     //
+    self.tableView.rowHeight = UITableViewAutomaticDimension;// 根据auto layout进行高度的计算
+    self.tableView.estimatedRowHeight = 163.0f;// 这个可以使用任意值，预估高度
+    
+    //
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;

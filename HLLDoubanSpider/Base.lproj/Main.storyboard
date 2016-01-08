@@ -66,7 +66,7 @@
                                             </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxV-0p-wxZ" userLabel="score_Label">
-                                            <rect key="frame" x="28" y="118" width="22" height="21"/>
+                                            <rect key="frame" x="28" y="112" width="22" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="e3T-Gy-ftH"/>
                                                 <constraint firstAttribute="height" constant="21" id="hhr-AT-djI"/>
@@ -83,9 +83,9 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1024人评价" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okS-HV-td7" userLabel="commit_Label">
-                                            <rect key="frame" x="28" y="139" width="59" height="21"/>
+                                            <rect key="frame" x="28" y="133" width="59" height="14"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Ybc-Cs-RPw"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="Ybc-Cs-RPw"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -108,6 +108,7 @@
                                         <constraint firstItem="W7t-mw-NWx" firstAttribute="leading" secondItem="aOg-Qb-Rcu" secondAttribute="trailing" id="N2K-dE-092"/>
                                         <constraint firstItem="okS-HV-td7" firstAttribute="top" secondItem="kxV-0p-wxZ" secondAttribute="bottom" id="VMp-0j-QeE"/>
                                         <constraint firstItem="sRi-Dr-5KP" firstAttribute="top" secondItem="Utb-1U-xaf" secondAttribute="top" constant="10" id="Vc3-3x-TTz"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="W7t-mw-NWx" secondAttribute="bottom" constant="10" id="WeC-yY-riF"/>
                                         <constraint firstItem="Zyo-Mc-uJM" firstAttribute="leading" secondItem="sRi-Dr-5KP" secondAttribute="trailing" constant="14" id="c2T-NK-FrY"/>
                                         <constraint firstItem="aOg-Qb-Rcu" firstAttribute="centerY" secondItem="W7t-mw-NWx" secondAttribute="centerY" id="iTc-tC-SnM"/>
                                         <constraint firstItem="lEJ-Te-jSY" firstAttribute="top" secondItem="Utb-1U-xaf" secondAttribute="top" constant="15" id="kQ1-az-Fh0"/>
@@ -117,8 +118,9 @@
                                         <constraint firstItem="IEj-YY-a49" firstAttribute="leading" secondItem="Zyo-Mc-uJM" secondAttribute="leading" id="t6f-gH-BKW"/>
                                         <constraint firstItem="okS-HV-td7" firstAttribute="leading" secondItem="kxV-0p-wxZ" secondAttribute="leading" id="toL-kY-faa"/>
                                         <constraint firstItem="W7t-mw-NWx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="okS-HV-td7" secondAttribute="trailing" constant="16" id="u5W-c4-Cfd"/>
-                                        <constraint firstItem="kxV-0p-wxZ" firstAttribute="top" secondItem="sRi-Dr-5KP" secondAttribute="bottom" constant="8" id="vaj-XD-IwA"/>
+                                        <constraint firstItem="kxV-0p-wxZ" firstAttribute="top" secondItem="sRi-Dr-5KP" secondAttribute="bottom" constant="2" id="vaj-XD-IwA"/>
                                         <constraint firstItem="aOg-Qb-Rcu" firstAttribute="height" secondItem="W7t-mw-NWx" secondAttribute="height" id="xqQ-LE-FiJ"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="okS-HV-td7" secondAttribute="bottom" constant="5" id="yoa-jF-3rf"/>
                                         <constraint firstItem="IEj-YY-a49" firstAttribute="top" secondItem="Zyo-Mc-uJM" secondAttribute="bottom" constant="5" id="zEx-tS-9dp"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zyo-Mc-uJM" secondAttribute="trailing" constant="15" id="zsb-oF-LsD"/>
                                     </constraints>
