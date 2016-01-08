@@ -13,9 +13,15 @@
 #import "HLLMovieCell.h"
 #import <MJRefresh/MJRefresh.h>
 
-@interface HLLTOP250Controller ()
+@interface HLLTOP250Controller ()<UISearchResultsUpdating,UISearchBarDelegate>
 
-@property (nonatomic ,strong) NSMutableArray * movies;
+@property (nonatomic ,copy) NSMutableArray * movies;
+@property (readwrite, copy) NSArray *moviesResults;
+@property (nonatomic, readwrite) NSMutableArray *tempMovies;
+
+@property (nonatomic ,strong) NSArray * scopeButtonTitles;
+@property (nonatomic ,strong) NSArray * filterContextArray;
+@property (nonatomic ,strong) UISearchController * searchController;
 @end
 
 @implementation HLLTOP250Controller
@@ -29,6 +35,13 @@
     return _movies;
 }
 
+- (NSMutableArray *)tempMovies{
+
+    if (!_tempMovies) {
+        _tempMovies = [NSMutableArray array];
+    }
+    return _tempMovies;
+}
 #pragma mark - life circle
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,9 +52,55 @@
     //
     MJRefreshBackGifFooter *footer = [MJRefreshBackGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(reloadTOP250MovieData)];
     self.tableView.mj_footer = footer;
+    
+    //
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    
+    _scopeButtonTitles = @[@"演员",@"排名",@"评分",@"影名"];
+    _filterContextArray = @[@"movieDesc",@"rank",@"score",@"name"];
+    [self.searchController.searchBar sizeToFit];
+    self.searchController.searchBar.delegate = self;
+    self.searchController.searchBar.scopeButtonTitles = _scopeButtonTitles;
+    self.searchController.searchBar.selectedScopeButtonIndex = 0;
+    self.searchController.searchBar.tintColor = [UIColor colorWithRed:0/255.0 green:109.0/255.0 blue:95.0/255.0 alpha:1];
+
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    
+    self.definesPresentationContext = YES;
+
+}
+#pragma mark - function
+- (void) hll_filterMovieWithFilterString:(NSString *)filterString andScopeSelectedIndex:(NSUInteger)index{
+ 
+    if (!filterString || filterString.length <= 0) {
+        self.movies = self.tempMovies;
+        self.moviesResults = [self.movies copy];
+    }else{
+        NSPredicate * filterPredicate = [NSPredicate predicateWithFormat:@"%K contains %@",self.filterContextArray[index],filterString];
+
+        self.movies = [[self.moviesResults filteredArrayUsingPredicate:filterPredicate] mutableCopy];
+    }
+    [self.tableView reloadData];
+}
+#pragma mark -
+#pragma mark UISearchBarDelegate
+- (void) searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+
+    [self hll_filterMovieWithFilterString:nil andScopeSelectedIndex:searchBar.selectedScopeButtonIndex];
 }
 
-#pragma mark - UITableViewDataSource & UITableViewDelegate
+#pragma mark UISearchResultsUpdating
+// Called when the search bar's text or scope has changed or when the search bar becomes first responder.
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
+
+    if (!searchController.active) {
+        return;
+    }
+    [self hll_filterMovieWithFilterString:searchController.searchBar.text andScopeSelectedIndex:searchController.searchBar.selectedScopeButtonIndex];
+}
+#pragma mark UITableViewDataSource & UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
@@ -69,7 +128,6 @@
     NSUInteger pageNumber = self.movies.count / 25 + 1;
     NSLog(@"%lu",(unsigned long)pageNumber);
     if (pageNumber > 10) {
-        
         [self.tableView.mj_footer endRefreshingWithNoMoreData];
         return;
     }
@@ -79,7 +137,8 @@
         NSLog(@"++++++TOP250++++++");
         [parseManager parseasTOP250MovieWithHTMLData:data andError:error result:^(NSArray *movies, NSError *parseError) {
 
-            [_movies addObjectsFromArray:movies];
+            [self.movies addObjectsFromArray:movies];
+            [self.tempMovies addObjectsFromArray: self.movies];
             [self.tableView reloadData];
             [self.tableView.mj_footer endRefreshing];
         }];

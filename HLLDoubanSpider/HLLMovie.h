@@ -16,11 +16,11 @@ typedef NS_ENUM(NSUInteger , MovieRankStatus) {
 };
 @interface HLLMovie : NSObject
 
-@property (nonatomic ,assign) int rank;
+@property (nonatomic ,copy) NSString * rank;
 @property (nonatomic ,copy) NSString * img;
 @property (nonatomic ,copy) NSString * name;
 @property (nonatomic ,copy) NSString * movieDesc;
-@property (nonatomic ,assign) float score;
+@property (nonatomic ,copy) NSString * score;
 @property (nonatomic ,copy) NSString * commit;
 @property (nonatomic ,copy) NSString * quote;
 

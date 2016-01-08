@@ -39,11 +39,11 @@
 
 - (void)configureCellWithTOP250Movie:(HLLMovie *)movie{
     
-    self.movieRankLabel.text = [NSString stringWithFormat:@"%d", movie.rank];
+    self.movieRankLabel.text = [NSString stringWithFormat:@"%@", movie.rank];
     self.movieNameLabel.text = [NSString stringWithFormat:@"%@",movie.name];
     self.movieDescLabel.text = [NSString stringWithFormat:@"%@",movie.movieDesc];
     self.movieQuoteLabel.text = [NSString stringWithFormat:@"%@",movie.quote];
-    self.movieScoreLabel.text = [NSString stringWithFormat:@"%.1f",movie.score];
+    self.movieScoreLabel.text = [NSString stringWithFormat:@"%@",movie.score];
     self.movieCommitLabel.text = [NSString stringWithFormat:@"%@",movie.commit];
     NSURL * imageURL = [NSURL URLWithString:movie.img];
     [self.movieImageView sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"db.png"]];
@@ -55,7 +55,7 @@
 - (void)configureCellWithWeekMovie:(HLLRankMovie *)movie{
     
     self.movieNameLabel.text = [NSString stringWithFormat:@"%@",movie.name];
-    self.movieRankLabel.text = [NSString stringWithFormat:@"%d", movie.rank];
+    self.movieRankLabel.text = [NSString stringWithFormat:@"%@", movie.rank];
     self.movieRankStepLabel.text = [NSString stringWithFormat:@"%d",movie.rankStep];
 }
 @end
@@ -66,7 +66,7 @@
     
     self.movieNameLabel.text = [NSString stringWithFormat:@"%@",movie.name];
     self.movieDescLabel.text = [NSString stringWithFormat:@"%@",movie.movieDesc];
-    self.movieScoreLabel.text = [NSString stringWithFormat:@"%.1f",movie.score];
+    self.movieScoreLabel.text = [NSString stringWithFormat:@"%@",movie.score];
     self.movieCommitLabel.text = [NSString stringWithFormat:@"%@",movie.commit];
     NSURL * imageURL = [NSURL URLWithString:movie.img];
     [self.movieImageView sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"db.png"]];

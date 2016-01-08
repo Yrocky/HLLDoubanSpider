@@ -20,11 +20,10 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0U9-ds-ttj">
                                 <rect key="frame" x="263" y="289" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.17104388297872342" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0U9-ds-ttj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Gqy-ys-Sgz"/>
                             <constraint firstItem="0U9-ds-ttj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="s5B-f8-F89"/>
