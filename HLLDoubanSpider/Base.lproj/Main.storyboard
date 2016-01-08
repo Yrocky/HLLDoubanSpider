@@ -9,16 +9,16 @@
         <scene sceneID="ema-rW-D2h">
             <objects>
                 <tableViewController id="e84-Kr-ioY" customClass="HLLTOP250Controller" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="169" sectionHeaderHeight="28" sectionFooterHeight="28" id="cJ8-zb-Ye9">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="163" sectionHeaderHeight="28" sectionFooterHeight="28" id="cJ8-zb-Ye9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movie" rowHeight="169" id="NGd-w4-fPp" customClass="HLLMovieCell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="169"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movie" rowHeight="163" id="NGd-w4-fPp" customClass="HLLMovieCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="163"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NGd-w4-fPp" id="Utb-1U-xaf">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="168"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="162"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEJ-Te-jSY" userLabel="rank_Label">
@@ -51,6 +51,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="史诗的终章。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7t-mw-NWx" userLabel="quote_Label">
                                             <rect key="frame" x="113" y="91" width="90" height="21"/>
+                                            <color key="backgroundColor" red="0.93904068499127402" green="0.93904068499127402" blue="0.93904068499127402" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="68W-U0-SIh"/>
                                                 <constraint firstAttribute="height" constant="21" id="Kuf-NE-Ktk"/>
@@ -90,6 +91,13 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOg-Qb-Rcu">
+                                            <rect key="frame" x="110" y="91" width="3" height="21"/>
+                                            <color key="backgroundColor" red="0.0" green="0.42745098040000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="3" id="IkI-Kj-Mp7"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="lEJ-Te-jSY" firstAttribute="leading" secondItem="Utb-1U-xaf" secondAttribute="leading" id="6vX-vi-RuN"/>
@@ -97,9 +105,11 @@
                                         <constraint firstItem="W7t-mw-NWx" firstAttribute="top" secondItem="IEj-YY-a49" secondAttribute="bottom" constant="10" id="Edy-jb-SRw"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W7t-mw-NWx" secondAttribute="trailing" constant="20" id="H4I-76-8ab"/>
                                         <constraint firstItem="W7t-mw-NWx" firstAttribute="leading" secondItem="sRi-Dr-5KP" secondAttribute="trailing" constant="20" id="MjT-Fr-3UO"/>
+                                        <constraint firstItem="W7t-mw-NWx" firstAttribute="leading" secondItem="aOg-Qb-Rcu" secondAttribute="trailing" id="N2K-dE-092"/>
                                         <constraint firstItem="okS-HV-td7" firstAttribute="top" secondItem="kxV-0p-wxZ" secondAttribute="bottom" id="VMp-0j-QeE"/>
                                         <constraint firstItem="sRi-Dr-5KP" firstAttribute="top" secondItem="Utb-1U-xaf" secondAttribute="top" constant="10" id="Vc3-3x-TTz"/>
                                         <constraint firstItem="Zyo-Mc-uJM" firstAttribute="leading" secondItem="sRi-Dr-5KP" secondAttribute="trailing" constant="14" id="c2T-NK-FrY"/>
+                                        <constraint firstItem="aOg-Qb-Rcu" firstAttribute="centerY" secondItem="W7t-mw-NWx" secondAttribute="centerY" id="iTc-tC-SnM"/>
                                         <constraint firstItem="lEJ-Te-jSY" firstAttribute="top" secondItem="Utb-1U-xaf" secondAttribute="top" constant="15" id="kQ1-az-Fh0"/>
                                         <constraint firstItem="IEj-YY-a49" firstAttribute="trailing" secondItem="Zyo-Mc-uJM" secondAttribute="trailing" id="nrg-nX-itA"/>
                                         <constraint firstItem="Zyo-Mc-uJM" firstAttribute="top" secondItem="Utb-1U-xaf" secondAttribute="top" constant="10" id="nuh-t3-CKo"/>
@@ -108,6 +118,7 @@
                                         <constraint firstItem="okS-HV-td7" firstAttribute="leading" secondItem="kxV-0p-wxZ" secondAttribute="leading" id="toL-kY-faa"/>
                                         <constraint firstItem="W7t-mw-NWx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="okS-HV-td7" secondAttribute="trailing" constant="16" id="u5W-c4-Cfd"/>
                                         <constraint firstItem="kxV-0p-wxZ" firstAttribute="top" secondItem="sRi-Dr-5KP" secondAttribute="bottom" constant="8" id="vaj-XD-IwA"/>
+                                        <constraint firstItem="aOg-Qb-Rcu" firstAttribute="height" secondItem="W7t-mw-NWx" secondAttribute="height" id="xqQ-LE-FiJ"/>
                                         <constraint firstItem="IEj-YY-a49" firstAttribute="top" secondItem="Zyo-Mc-uJM" secondAttribute="bottom" constant="5" id="zEx-tS-9dp"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zyo-Mc-uJM" secondAttribute="trailing" constant="15" id="zsb-oF-LsD"/>
                                     </constraints>

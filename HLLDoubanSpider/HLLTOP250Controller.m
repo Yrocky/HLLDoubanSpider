@@ -138,7 +138,7 @@
         [parseManager parseasTOP250MovieWithHTMLData:data andError:error result:^(NSArray *movies, NSError *parseError) {
 
             [self.movies addObjectsFromArray:movies];
-            [self.tempMovies addObjectsFromArray: self.movies];
+            [self.tempMovies addObjectsFromArray: movies];
             [self.tableView reloadData];
             [self.tableView.mj_footer endRefreshing];
         }];
