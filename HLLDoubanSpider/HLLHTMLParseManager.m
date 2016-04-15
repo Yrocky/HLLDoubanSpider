@@ -60,15 +60,18 @@ static HLLHTMLParseManager *_instance;
         HLLMovie * movie = [self hll_parseTOP250MovieWithTrElement:olELement index:index];
         [movies addObject:movie];
     }
-    if (movies.count == 0) {
-        if (result) {
-            result(nil,error);
+    [[NSOperationQueue mainQueue] addOperationWithBlock: ^{
+    
+        if (movies.count == 0) {
+            if (result) {
+                result(nil,error);
+            }
+        }else{
+            if (result) {
+                result(movies,nil);
+            }
         }
-    }else{
-        if (result) {
-            result(movies,nil);
-        }
-    }
+    }];
 }
 
 - (HLLMovie *) hll_parseTOP250MovieWithTrElement:(ONOXMLElement *)element index:(NSUInteger)index{
@@ -172,19 +175,22 @@ static HLLHTMLParseManager *_instance;
             NSLog(@"\t%@\t",dateRangeContext);
         }else{
             HLLRankMovie * movie = [self hll_parseWeekRankMovieWithTrElement:element index:index];
-            NSLog(@"%d:%@",movie.rank,movie.name);
+            NSLog(@"%@:%@",movie.rank,movie.name);
             [movies addObject:movie];
         }
     }
-    if (movies.count == 0) {
-        if (result) {
-            result(dateRangeContext,nil,error);
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock: ^{
+        if (movies.count == 0) {
+            if (result) {
+                result(dateRangeContext,nil,error);
+            }
+        }else{
+            if (result) {
+                result(dateRangeContext,movies,nil);
+            }
         }
-    }else{
-        if (result) {
-            result(dateRangeContext,movies,nil);
-        }
-    }
+    }];
 }
 
 - (HLLRankMovie *) hll_parseWeekRankMovieWithTrElement:(ONOXMLElement *)element index:(NSUInteger)index{
@@ -240,15 +246,18 @@ static HLLHTMLParseManager *_instance;
         [movies addObject:movie];
         NSLog(@"%@",movie.name);
     }];
-    if (movies.count == 0) {
-        if (result) {
-            result(nil,error);
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock: ^{
+        if (movies.count == 0) {
+            if (result) {
+                result(nil,error);
+            }
+        }else{
+            if (result) {
+                result(movies,nil);
+            }
         }
-    }else{
-        if (result) {
-            result(movies,nil);
-        }
-    }
+    }];
 }
 
 - (HLLMovie *) hll_parseNewMovieWithTrElement:(ONOXMLElement *)element index:(NSUInteger)index{

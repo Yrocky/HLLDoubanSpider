@@ -14,6 +14,9 @@
 #import <MJRefresh/MJRefresh.h>
 
 @interface HLLWeekMovieController ()
+
+@property (nonatomic ,strong) HLLRequestManager * requestManager;
+
 @property (nonatomic ,strong) NSMutableArray * weekMovies;
 
 @end
@@ -30,8 +33,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _requestManager = [[HLLRequestManager alloc] init];
+
     //
     [self reloadWeekMovieData];
+    
+    self.tableView.rowHeight = 44.0f;
+    self.tableView.sectionHeaderHeight = 0.1f;
     
     //
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(reloadWeekMovieData)];
@@ -45,21 +53,16 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    HLLMovieCell *cell ;
-    
-    cell = [tableView dequeueReusableCellWithIdentifier:@"weekMovie" forIndexPath:indexPath];
-    [cell configureCellWithWeekMovie:self.weekMovies[indexPath.row]];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"weekMovie" forIndexPath:indexPath];
     
     return cell;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+- (void ) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    return 0.1f;
-}
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HLLMovieCell * movieCell = (HLLMovieCell *)cell;
     
-    return 44.0f;
+    [movieCell configureCellWithWeekMovie:self.weekMovies[indexPath.row]];
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -69,7 +72,7 @@
 
 -  (void) reloadWeekMovieData{
     
-    [[HLLRequestManager shareRequestManager] request_doubanWeekMovieWithResult:^(id data, NSError *error) {
+    [_requestManager request_doubanWeekMovieWithResult:^(id data, NSError *error) {
         NSLog(@"++++++New Movie++++++");
         HLLHTMLParseManager * parserManager = [HLLHTMLParseManager shareParseManager];
         [parserManager parseasWeekMovieWithHTMLData:data andError:error result:^(NSString *dateRangeContext, NSArray *weekMovies, NSError *parseError) {

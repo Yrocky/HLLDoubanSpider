@@ -19,7 +19,6 @@
 		8482C5C11C3E2558004A871F /* HLLMovieRankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482C5C01C3E2558004A871F /* HLLMovieRankController.m */; };
 		8482C5CA1C3E25A6004A871F /* HLLHTMLParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482C5C41C3E25A6004A871F /* HLLHTMLParseManager.m */; };
 		8482C5CB1C3E25A6004A871F /* HLLMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482C5C61C3E25A6004A871F /* HLLMovie.m */; };
-		8482C5CC1C3E25A6004A871F /* HLLNetClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482C5C71C3E25A6004A871F /* HLLNetClient.m */; };
 		8482C5CD1C3E25A6004A871F /* HLLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482C5C91C3E25A6004A871F /* HLLRequestManager.m */; };
 		8482C5D71C3E275D004A871F /* HLLMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482C5D61C3E275D004A871F /* HLLMovieCell.m */; };
 		8482C5DE1C3E4EA0004A871F /* HLLWeekMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482C5DD1C3E4EA0004A871F /* HLLWeekMovieController.m */; };
@@ -66,10 +65,8 @@
 		8482C5C41C3E25A6004A871F /* HLLHTMLParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLLHTMLParseManager.m; sourceTree = "<group>"; };
 		8482C5C51C3E25A6004A871F /* HLLMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLMovie.h; sourceTree = "<group>"; };
 		8482C5C61C3E25A6004A871F /* HLLMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLLMovie.m; sourceTree = "<group>"; };
-		8482C5C71C3E25A6004A871F /* HLLNetClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLLNetClient.m; sourceTree = "<group>"; };
 		8482C5C81C3E25A6004A871F /* HLLRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLRequestManager.h; sourceTree = "<group>"; };
 		8482C5C91C3E25A6004A871F /* HLLRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLLRequestManager.m; sourceTree = "<group>"; };
-		8482C5CE1C3E25B6004A871F /* HLLNetClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLLNetClient.h; sourceTree = "<group>"; };
 		8482C5D51C3E275D004A871F /* HLLMovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLMovieCell.h; sourceTree = "<group>"; };
 		8482C5D61C3E275D004A871F /* HLLMovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLLMovieCell.m; sourceTree = "<group>"; };
 		8482C5DC1C3E4EA0004A871F /* HLLWeekMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLWeekMovieController.h; sourceTree = "<group>"; };
@@ -195,8 +192,6 @@
 		8482C5CF1C3E25C1004A871F /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				8482C5CE1C3E25B6004A871F /* HLLNetClient.h */,
-				8482C5C71C3E25A6004A871F /* HLLNetClient.m */,
 				8482C5C81C3E25A6004A871F /* HLLRequestManager.h */,
 				8482C5C91C3E25A6004A871F /* HLLRequestManager.m */,
 			);
@@ -429,7 +424,6 @@
 				8482C58B1C3E23CD004A871F /* main.m in Sources */,
 				8482C5CA1C3E25A6004A871F /* HLLHTMLParseManager.m in Sources */,
 				8482C5D71C3E275D004A871F /* HLLMovieCell.m in Sources */,
-				8482C5CC1C3E25A6004A871F /* HLLNetClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

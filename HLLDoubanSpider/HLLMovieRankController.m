@@ -14,6 +14,9 @@
 #import <MJRefresh/MJRefresh.h>
 
 @interface HLLMovieRankController ()
+
+@property (nonatomic ,strong) HLLRequestManager * requestManager;
+
 @property (nonatomic ,strong) NSMutableArray * newMovies;
 @end
 
@@ -33,8 +36,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _requestManager = [[HLLRequestManager alloc] init];
+
     //
     [self loadMovieData];
+    
+    self.tableView.rowHeight = 160.0f;
     
     //
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:nil];
@@ -50,16 +57,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    HLLMovieCell *cell ;
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"newMovie" forIndexPath:indexPath];
 
-    cell = [tableView dequeueReusableCellWithIdentifier:@"newMovie" forIndexPath:indexPath];
-    [cell configureCellWithNewMovie:self.newMovies[indexPath.row]];
     return cell;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    return  160.0f;
+- (void ) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    HLLMovieCell * movieCell = (HLLMovieCell *)cell;
+    
+    [movieCell configureCellWithNewMovie:self.newMovies[indexPath.row]];
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -75,7 +83,7 @@
 }
 - (void)reloadNewMovieData {
     
-    [[HLLRequestManager shareRequestManager] request_doubanNewMovieWithResult:^(id data, NSError *error) {
+    [_requestManager request_doubanNewMovieWithResult:^(id data, NSError *error) {
         
         HLLHTMLParseManager * parseManager = [HLLHTMLParseManager shareParseManager];
         NSLog(@"++++++New Movie++++++");

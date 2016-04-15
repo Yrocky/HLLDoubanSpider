@@ -15,6 +15,8 @@
 
 @interface HLLTOP250Controller ()<UISearchResultsUpdating,UISearchBarDelegate>
 
+@property (nonatomic ,strong) HLLRequestManager * requestManager;
+
 @property (nonatomic ,copy) NSMutableArray * movies;
 @property (readwrite, copy) NSArray *moviesResults;
 @property (nonatomic, readwrite) NSMutableArray *tempMovies;
@@ -46,11 +48,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _requestManager = [[HLLRequestManager alloc] init];
+    
     //
     [self reloadTOP250MovieData];
     
     //
-    MJRefreshBackGifFooter *footer = [MJRefreshBackGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(reloadTOP250MovieData)];
+    MJRefreshBackStateFooter *footer = [MJRefreshBackStateFooter footerWithRefreshingTarget:self refreshingAction:@selector(reloadTOP250MovieData)];
     self.tableView.mj_footer = footer;
     
     //
@@ -104,23 +108,30 @@
     }
     [self hll_filterMovieWithFilterString:searchController.searchBar.text andScopeSelectedIndex:searchController.searchBar.selectedScopeButtonIndex];
 }
-#pragma mark UITableViewDataSource & UITableViewDelegate
+#pragma mark - UITableViewDataSource & UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     return self.movies.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    HLLMovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"movie" forIndexPath:indexPath];
+    UITableViewCell *cell = nil;
     
-    [cell configureCellWithTOP250Movie:self.movies[indexPath.row]];
+    if (self.movies.count == 0 && indexPath.row == 0) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"PlaceholderCell" forIndexPath:indexPath];
+    }else{
+        cell = [tableView dequeueReusableCellWithIdentifier:@"movie" forIndexPath:indexPath];
+    }
     
     return cell;
 }
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
 
+    HLLMovieCell * movieCell = (HLLMovieCell *)cell;
+    
+    [movieCell configureCellWithTOP250Movie:self.movies[indexPath.row]];
+}
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
  
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -128,14 +139,23 @@
 
 #pragma mark - server
 - (void) reloadTOP250MovieData{
+
+    MJRefreshBackStateFooter * footer = (MJRefreshBackStateFooter *)self.tableView.mj_footer;
+//    footer.stateLabel.hidden = self.searchController.active;
     
+//    footer.hidden = self.searchController.active;
+    
+    if (self.searchController.active) {
+//        footer.state = MJRefreshStateRefreshing;
+        return;
+    }
     NSUInteger pageNumber = self.movies.count / 25 + 1;
     NSLog(@"%lu",(unsigned long)pageNumber);
     if (pageNumber > 10) {
         [self.tableView.mj_footer endRefreshingWithNoMoreData];
         return;
     }
-    [[HLLRequestManager shareRequestManager] request_doubanTOP250MovieWithPageNumber:pageNumber result:^(id data, NSError *error) {
+    [_requestManager request_doubanTOP250MovieWithPageNumber:pageNumber result:^(id data, NSError *error) {
         
         HLLHTMLParseManager * parseManager = [HLLHTMLParseManager shareParseManager];
         NSLog(@"++++++TOP250++++++");

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger , MovieRankStatus) {
     
@@ -24,6 +25,7 @@ typedef NS_ENUM(NSUInteger , MovieRankStatus) {
 @property (nonatomic ,copy) NSString * commit;
 @property (nonatomic ,copy) NSString * quote;
 
+@property (nonatomic ,strong) UIImage * image;
 @end
 
 @interface HLLRankMovie : HLLMovie

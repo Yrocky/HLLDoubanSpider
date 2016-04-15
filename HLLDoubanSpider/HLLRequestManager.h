@@ -14,8 +14,6 @@ typedef void(^requestResult)(id data,NSError * error);
 
 @interface HLLRequestManager : NSObject
 
-+ (instancetype) shareRequestManager;
-
 - (void) request_doubanTOP250MovieWithPageNumber:(NSUInteger)pageNumber result:(requestResult)result;
 
 - (void) request_doubanWeekMovieWithResult:(requestResult)result;
