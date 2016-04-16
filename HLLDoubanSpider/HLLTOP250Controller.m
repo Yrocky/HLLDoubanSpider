@@ -17,9 +17,9 @@
 
 @property (nonatomic ,strong) HLLRequestManager * requestManager;
 
-@property (nonatomic ,copy) NSMutableArray * movies;
-@property (readwrite, copy) NSArray *moviesResults;
-@property (nonatomic, readwrite) NSMutableArray *tempMovies;
+@property (nonatomic ,strong) NSMutableArray * movies;
+@property (nonatomic, strong) NSArray * moviesResults;
+@property (nonatomic, strong) NSMutableArray * tempMovies;
 
 @property (nonatomic ,strong) NSArray * scopeButtonTitles;
 @property (nonatomic ,strong) NSArray * filterContextArray;
@@ -81,13 +81,12 @@
 }
 #pragma mark - function
 - (void) hll_filterMovieWithFilterString:(NSString *)filterString andScopeSelectedIndex:(NSUInteger)index{
- 
+    
     if (!filterString || filterString.length <= 0) {
         self.movies = self.tempMovies;
         self.moviesResults = [self.movies copy];
     }else{
         NSPredicate * filterPredicate = [NSPredicate predicateWithFormat:@"%K contains %@",self.filterContextArray[index],filterString];
-
         self.movies = [[self.moviesResults filteredArrayUsingPredicate:filterPredicate] mutableCopy];
     }
     [self.tableView reloadData];
@@ -140,16 +139,7 @@
 #pragma mark - server
 - (void) reloadTOP250MovieData{
 
-    MJRefreshBackStateFooter * footer = (MJRefreshBackStateFooter *)self.tableView.mj_footer;
-//    footer.stateLabel.hidden = self.searchController.active;
-    
-//    footer.hidden = self.searchController.active;
-    
-    if (self.searchController.active) {
-//        footer.state = MJRefreshStateRefreshing;
-        return;
-    }
-    NSUInteger pageNumber = self.movies.count / 25 + 1;
+    NSUInteger pageNumber = self.tempMovies.count / 25 + 1;
     NSLog(@"%lu",(unsigned long)pageNumber);
     if (pageNumber > 10) {
         [self.tableView.mj_footer endRefreshingWithNoMoreData];
@@ -163,6 +153,9 @@
 
             [self.movies addObjectsFromArray:movies];
             [self.tempMovies addObjectsFromArray: movies];
+            if (!self.searchController.active) {
+                
+            }
             [self.tableView reloadData];
             [self.tableView.mj_footer endRefreshing];
         }];
